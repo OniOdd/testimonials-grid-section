@@ -1,0 +1,32 @@
+:root {
+  --clr-white: #fff;
+  --clr-violet: #7541c8;
+  --clr-dark-grayish-blue: #48556a;
+  --clr-dark-blackish-blue: #19212e;
+  --clr-light-gray: #cfcfcf;
+  --clr-light-grayish-blue: #ecf2f8;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+}
+
+body {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  font: normal 500 0.8125rem "Barlow Semi Condensed", sans-serif;
+  color: var(--clr-white);
+}/*# sourceMappingURL=style.css.map */
