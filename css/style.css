@@ -27,6 +27,55 @@ body {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  padding: 71px 24px;
   font: normal 500 0.8125rem "Barlow Semi Condensed", sans-serif;
   color: var(--clr-white);
+  background-color: var(--clr-light-grayish-blue);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 327px;
+  grid-template-rows: auto;
+  gap: 24px 0;
+}
+
+.card {
+  padding: 24px 34px 30px 30px;
+  background-color: var(--clr-white);
+  border-radius: 8px;
+}
+.card--bg-image {
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 88.5% top;
+}
+.card--bg-violet {
+  background-color: var(--clr-violet);
+}
+.card__header {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  margin-bottom: 22px;
+}
+.card__avatar {
+  display: block;
+  width: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+.card__status {
+  font-size: 0.6875rem;
+  opacity: 0.5;
+}
+.card__testimonial {
+  font-size: 1.25625rem;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+.card__quote {
+  font-size: 0.8625rem;
+  opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */

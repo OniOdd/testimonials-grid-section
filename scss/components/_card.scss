@@ -1,0 +1,48 @@
+@use '../util' as u;
+
+.card {
+  padding: 24px 34px 30px 30px;
+  background-color: var(--clr-white);
+  border-radius: 8px;
+
+  &--bg-image {
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 88.5% top;
+  }
+
+  &--bg-violet { background-color: var(--clr-violet); }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    margin-bottom: 22px;
+  }
+
+  &__avatar {
+    display: block;
+    width: 32px;
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-radius: 50%;
+  }
+
+  &__author {
+  }
+
+  &__status {
+    font-size: u.rem(11);
+    opacity: .5;
+  }
+
+  &__testimonial {
+    font-size: u.rem(20.1);
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+
+  &__quote {
+    font-size: u.rem(13.8);
+    opacity: .7;
+  }
+}
