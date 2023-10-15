@@ -11,38 +11,50 @@
     background-position: 88.5% top;
   }
 
-  &--bg-violet { background-color: var(--clr-violet); }
+  &--bg-clr-violet { background-color: var(--clr-violet); }
+  &--bg-clr-dark { background-color: var(--clr-dark-grayish-blue); }
+  &--bg-clr-black { background-color: var(--clr-dark-blackish-blue); }
 
   &__header {
     display: flex;
     align-items: center;
     column-gap: 16px;
-    margin-bottom: 22px;
+    margin-bottom: 21px;
   }
 
   &__avatar {
     display: block;
     width: 32px;
-    border: 2px solid rgba(255, 255, 255, .4);
     border-radius: 50%;
+
+    &--border-clr-light-violet { border: 2px solid rgba(255, 255, 255, .4); }
+    &--border-clr-violet { border: 2px solid var(--clr-violet); }
   }
 
   &__author {
+    font-weight: 600;
+
+    &--clr-dark { color: var(--clr-dark-grayish-blue); }
   }
 
   &__status {
     font-size: u.rem(11);
     opacity: .5;
+
+    &--clr-dark { @extend .card__author--clr-dark; }
   }
 
   &__testimonial {
     font-size: u.rem(20.1);
     font-weight: 600;
-    margin-bottom: 22px;
+    margin-bottom: 21px;
+
+    &--clr-dark { @extend .card__author--clr-dark; }
   }
 
   &__quote {
-    font-size: u.rem(13.8);
     opacity: .7;
+
+    &--clr-dark { @extend .card__author--clr-dark; }
   }
 }

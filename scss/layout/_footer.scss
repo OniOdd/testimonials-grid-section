@@ -1,0 +1,11 @@
+@use '../util' as u;
+
+.attribution {
+  display: none;
+  margin-top: 20px;
+  font-size: u.rem(11);
+  text-align: center;
+  color: var(--clr-dark-grayish-blue);
+
+  &__link:hover { opacity: .7; }
+}

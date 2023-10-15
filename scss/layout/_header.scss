@@ -1,0 +1,12 @@
+@use '../util' as u;
+
+.header {
+  display: none;
+  margin-bottom: 20px;
+}
+.header__title {
+  font-size: u.rem(20);
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+}
