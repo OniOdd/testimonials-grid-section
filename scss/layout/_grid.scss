@@ -1,6 +1,24 @@
+@use '../util' as u;
+
 .grid {
   display: grid;
   grid-template-columns: 327px;
   grid-template-rows: auto;
   gap: 24px 0;
+
+  @include u.breakpoint(small) {
+    grid-template-areas: 'one one' 'two three' 'four four' 'five .';
+    grid-template-columns: repeat(2, 256px);
+    gap: 24px 30px;
+  }
+
+  @include u.breakpoint(medium) {
+    grid-template-areas: 'one one five' 'two three five' 'four four .';
+    grid-template-columns: repeat(3, 256px);
+  }
+
+  @include u.breakpoint(x-large) {
+    grid-template-areas: 'one one two five' 'three four four five';
+    grid-template-columns: repeat(4, 256px);
+  }
 }

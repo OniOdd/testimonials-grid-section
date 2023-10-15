@@ -1,14 +1,30 @@
 @use '../util' as u;
 
 .card {
-  padding: 24px 34px 30px 30px;
+  padding: 22px 34px 28px 30px;
   background-color: var(--clr-white);
   border-radius: 8px;
+  box-shadow: 20px 50px 70px 0 rgba(0, 0, 0, .1);
+
+  &--one &__quote { width: 37.6ch; }
+  &--five &__quote { width: 39.7ch; }
+
+  @include u.breakpoint(small) {
+    &--one { grid-area: one; }
+    &--two { grid-area: two; }
+    &--three { grid-area: three; }
+    &--four { grid-area: four; }
+    &--five { grid-area: five; }
+    &--one &__quote { width: auto; }
+    &--five &__quote { width: auto; }
+  }
 
   &--bg-image {
     background-image: url('../images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
-    background-position: 88.5% top;
+    background-position: 88.2% top;
+
+    @include u.breakpoint(small) { background-position: 81% top; }
   }
 
   &--bg-clr-violet { background-color: var(--clr-violet); }
@@ -19,7 +35,7 @@
     display: flex;
     align-items: center;
     column-gap: 16px;
-    margin-bottom: 21px;
+    margin-bottom: 18px;
   }
 
   &__avatar {
@@ -47,12 +63,13 @@
   &__testimonial {
     font-size: u.rem(20.1);
     font-weight: 600;
-    margin-bottom: 21px;
+    margin-bottom: 18px;
 
     &--clr-dark { @extend .card__author--clr-dark; }
   }
 
   &__quote {
+    line-height: 1.4;
     opacity: .7;
 
     &--clr-dark { @extend .card__author--clr-dark; }

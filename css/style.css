@@ -55,6 +55,25 @@ body {
   grid-template-rows: auto;
   gap: 24px 0;
 }
+@media (min-width: 590px) {
+  .grid {
+    grid-template-areas: "one one" "two three" "four four" "five .";
+    grid-template-columns: repeat(2, 256px);
+    gap: 24px 30px;
+  }
+}
+@media (min-width: 880px) {
+  .grid {
+    grid-template-areas: "one one five" "two three five" "four four .";
+    grid-template-columns: repeat(3, 256px);
+  }
+}
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-areas: "one one two five" "three four four five";
+    grid-template-columns: repeat(4, 256px);
+  }
+}
 
 .attribution {
   display: none;
@@ -68,14 +87,49 @@ body {
 }
 
 .card {
-  padding: 24px 34px 30px 30px;
+  padding: 22px 34px 28px 30px;
   background-color: var(--clr-white);
   border-radius: 8px;
+  box-shadow: 20px 50px 70px 0 rgba(0, 0, 0, 0.1);
+}
+.card--one .card__quote {
+  width: 37.6ch;
+}
+.card--five .card__quote {
+  width: 39.7ch;
+}
+@media (min-width: 590px) {
+  .card--one {
+    grid-area: one;
+  }
+  .card--two {
+    grid-area: two;
+  }
+  .card--three {
+    grid-area: three;
+  }
+  .card--four {
+    grid-area: four;
+  }
+  .card--five {
+    grid-area: five;
+  }
+  .card--one .card__quote {
+    width: auto;
+  }
+  .card--five .card__quote {
+    width: auto;
+  }
 }
 .card--bg-image {
   background-image: url("../images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
-  background-position: 88.5% top;
+  background-position: 88.2% top;
+}
+@media (min-width: 590px) {
+  .card--bg-image {
+    background-position: 81% top;
+  }
 }
 .card--bg-clr-violet {
   background-color: var(--clr-violet);
@@ -91,7 +145,7 @@ body {
   align-items: center;
   -moz-column-gap: 16px;
        column-gap: 16px;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 }
 .card__avatar {
   display: block;
@@ -117,8 +171,9 @@ body {
 .card__testimonial {
   font-size: 1.25625rem;
   font-weight: 600;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 }
 .card__quote {
+  line-height: 1.4;
   opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */
