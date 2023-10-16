@@ -1,7 +1,11 @@
 @use '../util' as u;
 
 .header {
-  display: none;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  height: 0;
+  opacity: 0;
   margin-bottom: 20px;
 }
 .header__title {
