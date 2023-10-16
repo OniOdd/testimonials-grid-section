@@ -1,7 +1,8 @@
 @use '../util' as u;
 
+.footer { display: none; }
+
 .attribution {
-  display: none;
   margin-top: 20px;
   font-size: u.rem(11);
   text-align: center;
