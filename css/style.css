@@ -63,6 +63,7 @@ body {
   .grid {
     grid-template-areas: "one one" "two three" "four four" "five .";
     grid-template-columns: repeat(2, 256px);
+    grid-template-rows: repeat(4, auto);
     gap: 24px 30px;
   }
 }
@@ -70,12 +71,14 @@ body {
   .grid {
     grid-template-areas: "one one five" "two three five" "four four .";
     grid-template-columns: repeat(3, 256px);
+    grid-template-rows: repeat(3, auto);
   }
 }
 @media (min-width: 1200px) {
   .grid {
     grid-template-areas: "one one two five" "three four four five";
     grid-template-columns: repeat(4, 256px);
+    grid-template-rows: repeat(2, auto);
   }
 }
 
