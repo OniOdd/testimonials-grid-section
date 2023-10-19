@@ -56,7 +56,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 327px;
-  grid-template-rows: auto;
+  grid-template-rows: repeat(5, auto);
   gap: 24px 0;
 }
 @media (min-width: 590px) {
